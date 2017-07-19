@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 import { AppRoutingModule, appRouterComponents } from './app.routing.module';
 import { TaskModule } from './task/task.module';
 import { UsersModule } from './users/users.module';
+import { AdminModule } from './admin/admin.module';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { UsersModule } from './users/users.module';
     HttpModule,
     TaskModule,
     UsersModule,
-    AppRoutingModule,       
+    AdminModule,
+    AppRoutingModule,               
   ],
   providers: [],
   bootstrap: [AppComponent]
