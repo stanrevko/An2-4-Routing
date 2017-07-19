@@ -8,22 +8,24 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Task Manager</a>
+              </button>              
             </div>
 
             <div>
               <ul class="nav navbar-nav">
-                <li>
-                  <a href="#about">About</a>
+                <li>                  
+                  <a class="navbar-brand" routerLink="/">Task Manager</a>
+                  <a  class="navbar-brand" routerLink="/about" routerLinkActive="active">About</a>                  
+                   <a routerLink="/users">Users</a>                
                 </li>
               </ul>
             </div>
           </div>
         </nav>
+      <div class="container">
+    <router-outlet></router-outlet>
+    <!-- Routed views go here -->
+  </div>
 
-        <div class="container">
-
-        </div>
     </div>
 </div>
