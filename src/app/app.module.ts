@@ -2,20 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { AuthGuard } from './guards/auth.guard';
 import { AppComponent } from "./app.component";
-
+import { AuthService } from './services/auth.service';
 import { Router } from '@angular/router';
 import { AppRoutingModule, appRouterComponents } from './app.routing.module';
 import { TaskModule } from './task/task.module';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,  
-    appRouterComponents, 
+    appRouterComponents,  
   ],
   imports: [
     BrowserModule,
@@ -26,7 +25,7 @@ import { AdminModule } from './admin/admin.module';
     AdminModule,
     AppRoutingModule,               
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

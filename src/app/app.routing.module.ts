@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AboutComponent, HomeComponent, PageNotFoundComponent } from './components';
+import { AboutComponent, HomeComponent, PageNotFoundComponent, LoginComponent  } from './components';
 
 const routes: Routes = [
   
@@ -9,7 +9,10 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent
   },
-  
+  { 
+    path: 'login', 
+    component: LoginComponent 
+  },
   {
     // The router will match this route if the URL requested
     // doesn't match any paths for routes defined in our configuration
@@ -18,7 +21,7 @@ const routes: Routes = [
   }
 ];
 
-export let appRouterComponents = [AboutComponent, HomeComponent, PageNotFoundComponent];
+export let appRouterComponents = [AboutComponent, HomeComponent, LoginComponent , PageNotFoundComponent];
 
 @NgModule({
   imports: [

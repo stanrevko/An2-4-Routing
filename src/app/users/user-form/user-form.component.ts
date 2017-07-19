@@ -51,8 +51,7 @@ export class UserFormComponent implements OnInit, OnDestroy {
     else {
       this.userArrayService.addUser(user);
       // if success
-      this.oldUser = this.user;
-      this.router.navigate(['/users']);
+      this.oldUser = this.user;      
     }
 
     this.router.navigate(['./../../'], { relativeTo: this.route});
