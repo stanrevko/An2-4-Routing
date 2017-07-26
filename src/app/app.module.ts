@@ -10,6 +10,7 @@ import { AppRoutingModule, appRouterComponents } from './app.routing.module';
 import { TaskModule } from './task/task.module';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
+import { ShopModule } from './shop/shop.module';
 import { DialogService } from './services/dialog.service';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { DialogService } from './services/dialog.service';
     TaskModule,
     UsersModule,
     AdminModule,
+    ShopModule,
     AppRoutingModule,               
   ],
   providers: [AuthGuard, AuthService, DialogService],

@@ -1,0 +1,16 @@
+<div *ngFor="let prod of products" class="col-sm-4 col-lg-4 col-md-4" >
+    <div class="thumbnail">
+        <img src="http://placehold.it/320x150" alt="">
+        <div class="caption">
+            <h4 class="pull-right">${{prod.price}}</h4>
+            <h4><a href="#">{{prod.name}}</a></h4>
+            <p> {{prod.description}}</p>
+        </div>
+    <div>
+      <div style="float:left; margin-left:5px;" ><b>{{prod.category.name}}</b>    </div>
+      <div align="right" style="margin: 5px">    
+        <a href="#" class="btn btn-primary" target="_blank" (click)="onAddToCart($event, prod)">AddToCart</a>
+      </div>
+    </div>
+    </div>
+</div>
