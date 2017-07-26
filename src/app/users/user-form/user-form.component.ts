@@ -3,6 +3,7 @@ import { ActivatedRoute, Params , Router } from '@angular/router';
 
 import { User } from './../user';
 import { UserArrayService } from './../user-array.service';
+import { DialogService }  from './../../services/dialog.service';
 
 @Component({
   templateUrl: 'user-form.component.html',
@@ -15,7 +16,8 @@ export class UserFormComponent implements OnInit, OnDestroy {
   constructor(
     private userArrayService: UserArrayService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private dialogService: DialogService
   ) { }
 
   ngOnInit(): void {
@@ -60,4 +62,13 @@ export class UserFormComponent implements OnInit, OnDestroy {
   goBack() {
     this.router.navigate(['./../../'], { relativeTo: this.route});
   }
+
+  canDeactivate(): Promise<boolean> | boolean {
+    if (!this.oldUser || this.oldUser.firstName === this.user.firstName) {
+      return true;
+    }
+    
+    return this.dialogService.confirm('Discard changes?');
+}
+
 }

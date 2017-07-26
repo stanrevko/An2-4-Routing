@@ -10,6 +10,7 @@ import { AppRoutingModule, appRouterComponents } from './app.routing.module';
 import { TaskModule } from './task/task.module';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
+import { DialogService } from './services/dialog.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { AdminModule } from './admin/admin.module';
     AdminModule,
     AppRoutingModule,               
   ],
-  providers: [AuthGuard, AuthService],
+  providers: [AuthGuard, AuthService, DialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
