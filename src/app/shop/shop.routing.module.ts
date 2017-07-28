@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProductListComponent } from '.';
+import { ShopComponent } from '.';
 
 
 const routes: Routes = [
   {
     path: 'shop',
-    component: ProductListComponent,
+    component: ShopComponent,
 //    canActivate: [AuthGuard],
     children: [
       {
@@ -21,7 +21,7 @@ const routes: Routes = [
   }
 ];
 
-export let adminRouterComponents = [ProductListComponent];
+export let shopRouterComponents = [ShopComponent];
 
 @NgModule({
   imports: [

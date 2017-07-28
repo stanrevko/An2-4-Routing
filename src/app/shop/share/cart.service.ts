@@ -8,7 +8,7 @@ interface ICart{
 }
 
 Injectable()
-export class CartModel implements ICart{
+export class CartService implements ICart{
     private items: Product[] = [];
     
     getItems(): Product[]  {
