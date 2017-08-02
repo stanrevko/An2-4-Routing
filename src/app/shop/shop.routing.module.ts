@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ShopComponent } from '.';
+import { ShopComponent, OrderComponent, ProductListComponent, OrderFormComponent } from '.';
 
 
 const routes: Routes = [
@@ -13,7 +13,10 @@ const routes: Routes = [
         path: '',
 //        canActivateChild: [AuthGuard],
         children: [
-//          { path: 'users', component: ManageUsersComponent },
+          { path: 'order/order-form', component: OrderFormComponent },
+          { path: 'order', component: OrderComponent,
+         },          
+          { path: '', component: ProductListComponent },
 
         ]
       }

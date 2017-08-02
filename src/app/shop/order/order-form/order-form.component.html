@@ -1,0 +1,35 @@
+<div class="row">
+  <form class="form-horizontal">
+    <fieldset>
+
+      <!-- Form Name -->
+      <legend>Order</legend>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinputname">Full Name</label>
+        <div class="col-md-4">
+          <input id="textinputname" name="textinputname" [(ngModel)]="order.fullName"> type="text" placeholder="Full Name" class="form-control input-md" required="">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinputmobile">Mobile</label>
+        <div class="col-md-4">
+          <input id="textinputmobile" name="textinputmobile" type="text" placeholder="Mobile No" class="form-control input-md">
+
+        </div>
+      </div>     
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="singlebuttonsubmit"></label>
+        <div class="col-md-4">
+          <button id="singlebuttonsubmit" name="singlebuttonsubmit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>

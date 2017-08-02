@@ -12,6 +12,7 @@ import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
 import { ShopModule } from './shop/shop.module';
 import { DialogService } from './services/dialog.service';
+import { LocalStorageModule } from 'angular-2-local-storage';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,11 @@ import { DialogService } from './services/dialog.service';
     UsersModule,
     AdminModule,
     ShopModule,
-    AppRoutingModule,               
+    AppRoutingModule,  
+    LocalStorageModule.withConfig({
+            prefix: 'my-app',
+            storageType: 'localStorage'
+    })             
   ],
   providers: [AuthGuard, AuthService, DialogService],
   bootstrap: [AppComponent]

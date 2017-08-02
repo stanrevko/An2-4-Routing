@@ -3,3 +3,5 @@
 <ul>
   <app-cart-item *ngFor="let item of items" [item]="item" (remove)="removeItem($event)"></app-cart-item>
 </ul> 
+
+<a  *ngIf="getCount()>0" routerLink="/shop/order" class="btn btn-success"> Order</a>
